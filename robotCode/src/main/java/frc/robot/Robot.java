@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.simulation.DrivetrainSim;
+import frc.robot.simulation.SimDriverStationProxy;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -31,6 +32,8 @@ public class Robot extends TimedRobot {
     private final DifferentialDrive drivetrain = new DifferentialDrive(leftFX::set, rightFX::set);
 
     private DrivetrainSim sim = new DrivetrainSim(leftFX, rightFX, imu);
+
+    private SimDriverStationProxy simDS = new SimDriverStationProxy();
     
     /**
      * This function is run when the robot is first started up and should be used
@@ -50,6 +53,11 @@ public class Robot extends TimedRobot {
 
         Pigeon2Configuration imuCfg = new Pigeon2Configuration();
         imu.getConfigurator().apply(imuCfg);
+    }
+
+    @Override
+    public void autonomousPeriodic() {
+        drivetrain.arcadeDrive(0, 0.5);
     }
 
     @Override
