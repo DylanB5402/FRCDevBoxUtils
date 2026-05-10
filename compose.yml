@@ -1,0 +1,18 @@
+services:
+  devbox:
+    build: .
+    volumes:
+      - ./robotCode:/workspace/robotCode
+    working_dir: /workspace/robotCode
+    stdin_open: true
+    tty: true
+    ports:
+    - "1735:1735"
+    - "1735:1735/udp"
+    - "5810:5810"
+    - "5810:5810/udp"
+    - "1740:1740"
+    - "1740:1740/udp"
+    - "17740:17740"
+    - "17740:17740/udp"
+    - "1250:1250"
