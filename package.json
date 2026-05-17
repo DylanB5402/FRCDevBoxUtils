@@ -1,0 +1,26 @@
+{
+  "name": "frcdevbox",
+  "version": "1.0.0",
+  "description": "Utilities for FRC Dev Boxes",
+  "scripts": {
+    "setupDevBox": "tsx setupDevBox.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DylanB5402/FRCDevBoxUtils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DylanB5402/FRCDevBoxUtils/issues"
+  },
+  "homepage": "https://github.com/DylanB5402/FRCDevBoxUtils#readme",
+  "engines": {
+    "node": "22"
+  },
+  "dependencies": {
+    "@daytona/sdk": "^0.173.0",
+    "dotenv": "^17.4.2",
+    "tsx": "^4.21.0"
+  }
+}
