@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Utilities for FRC Dev Boxes",
   "scripts": {
-    "setupDevBox": "tsx setupDevBox.ts"
+    "setupDevBox": "tsx setupDevBox.ts",
+    "buildAscope": "export ASCOPE_DISTRIBUTION=LITE; cd AdvantageScope && npm install && npm run build",
+    "dev-compose": "docker compose run --rm --service-ports --build devbox"
   },
   "repository": {
     "type": "git",

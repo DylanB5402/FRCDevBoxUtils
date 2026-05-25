@@ -25,9 +25,15 @@ async function main() {
 
     const signedUrl = await sandbox.getSignedPreviewUrl(5810, 3600);
 
+    console.log("NT4:")
     console.log(`URL: ${signedUrl.url}`);  // Token is embedded in the URL
     console.log(`Token: ${signedUrl.token}`);  // Can be used to revoke access
 
+    const signedUrl2 = await sandbox.getSignedPreviewUrl(5808, 3600);
+
+    console.log("AdvantageScope:")
+    console.log(`URL: ${signedUrl2.url}`);  // Token is embedded in the URL
+    console.log(`Token: ${signedUrl2.token}`);  // Can be used to revoke access
 
 }
 main()
